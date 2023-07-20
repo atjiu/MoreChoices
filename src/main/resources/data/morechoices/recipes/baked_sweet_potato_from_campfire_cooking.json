@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:campfire_cooking",
+    "cookingtime": 600,
+    "experience": 0.35,
+    "ingredient": {
+        "item": "morechoices:sweet_potato"
+    },
+    "result": "morechoices:baked_sweet_potato"
+}
