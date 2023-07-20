@@ -11,6 +11,7 @@ import net.minecraft.util.registry.Registry;
 
 public class ModItems {
 
+    // WEAPON & TOOL
     public final static Item AMETHYST_SWORD = Registry.register(Registry.ITEM, new Identifier(MoreChoicesMod.MOD_ID, "amethyst_sword"),
             new SwordItem(ModToolMaterial.AMETHYST, 3, -2.4f, new Item.Settings().group(ItemGroup.COMBAT)));
     public final static Item COPPER_SWORD = Registry.register(Registry.ITEM, new Identifier(MoreChoicesMod.MOD_ID, "copper_sword"),
@@ -24,6 +25,7 @@ public class ModItems {
     public final static Item COPPER_HOE = Registry.register(Registry.ITEM, new Identifier(MoreChoicesMod.MOD_ID, "copper_hoe"),
             new CopperHoeItem(ModToolMaterial.COPPER, -2, -1.0f, new Item.Settings().group(ItemGroup.TOOLS)));
 
+    // ARMOR
     public final static Item COPPER_HELMET = Registry.register(Registry.ITEM, new Identifier(MoreChoicesMod.MOD_ID, "copper_helmet"),
             new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlot.HEAD, new Item.Settings().group(ItemGroup.COMBAT)));
     public final static Item COPPER_CHESTPLATE = Registry.register(Registry.ITEM, new Identifier(MoreChoicesMod.MOD_ID, "copper_chestplate"),
@@ -33,10 +35,19 @@ public class ModItems {
     public final static Item COPPER_BOOTS = Registry.register(Registry.ITEM, new Identifier(MoreChoicesMod.MOD_ID, "copper_boots"),
             new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlot.FEET, new Item.Settings().group(ItemGroup.COMBAT)));
 
+    // CROP
     public final static Item SWEET_POTATO = Registry.register(Registry.ITEM, new Identifier(MoreChoicesMod.MOD_ID, "sweet_potato"),
             new AliasedBlockItem(ModBlocks.SWEET_POTATOES, new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(1).saturationModifier(0.3f).build())));
     public final static Item BAKED_SWEET_POTATO = Registry.register(Registry.ITEM, new Identifier(MoreChoicesMod.MOD_ID, "baked_sweet_potato"),
             new Item(new Item.Settings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(6).saturationModifier(0.6f).build())));
+
+    // ORE
+    public final static Item HELLSTONE_INGOT = Registry.register(Registry.ITEM, new Identifier(MoreChoicesMod.MOD_ID, "hellstone_ingot"),
+            new Item(new Item.Settings().group(ItemGroup.MATERIALS)));
+    public final static Item RAW_HELLSTONE = Registry.register(Registry.ITEM, new Identifier(MoreChoicesMod.MOD_ID, "raw_hellstone"),
+            new Item(new Item.Settings().group(ItemGroup.MATERIALS)));
+    public final static Item HELLSTONE_ORE = Registry.register(Registry.ITEM, new Identifier(MoreChoicesMod.MOD_ID, "hellstone_ore"),
+            new BlockItem(ModBlocks.HELLSTONE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
 
 
     public static void init() {
