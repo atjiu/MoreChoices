@@ -1,5 +1,6 @@
 package com.tomoya42.morechoices.material;
 
+import com.tomoya42.morechoices.item.ModItems;
 import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
@@ -11,6 +12,7 @@ import java.util.function.Supplier;
 public enum ModToolMaterial implements ToolMaterial {
 
     COPPER(MiningLevels.IRON, 250, 6.0f, 2.0f, 14, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
+    HELLSTONE(MiningLevels.IRON, 550, 6.0f, 2.0f, 14, () -> Ingredient.ofItems(ModItems.HELLSTONE_INGOT)),
     AMETHYST(MiningLevels.DIAMOND, 512, 8.0f, 6.0f, 10, () -> Ingredient.ofItems(Items.AMETHYST_SHARD)),
     ;
 

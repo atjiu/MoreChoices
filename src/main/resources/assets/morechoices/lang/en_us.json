@@ -19,5 +19,9 @@
     "item.morechoices.hellstone_nugget": "Hell Stone Nugget",
     "item.morechoices.copper_nugget": "Copper Nugget",
     "block.morechoices.hellstone_block": "Hell Stone Block",
-    "item.morechoices.hellstone_block": "Hell Stone Block"
+    "item.morechoices.hellstone_block": "Hell Stone Block",
+    "item.morechoices.hellstone_helmet": "Hell Stone Helmet",
+    "item.morechoices.hellstone_chestplate": "Hell Stone ChestPlate",
+    "item.morechoices.hellstone_leggings": "Hell Stone Leggings",
+    "item.morechoices.hellstone_boots": "Hell Stone Boots"
 }

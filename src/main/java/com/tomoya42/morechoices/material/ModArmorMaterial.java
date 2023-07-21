@@ -1,5 +1,6 @@
 package com.tomoya42.morechoices.material;
 
+import com.tomoya42.morechoices.item.ModItems;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Items;
@@ -12,7 +13,8 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterial implements ArmorMaterial {
 
-    COPPER("copper", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
+    COPPER("copper", 15, new int[]{2, 5, 6, 2}, 9, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0f, 0.0f, () -> Ingredient.ofItems(Items.COPPER_INGOT)),
+    HELLSTONE("hellstone", 20, new int[]{3, 6, 7, 3}, 9, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0f, 0.0f, () -> Ingredient.ofItems(ModItems.HELLSTONE_INGOT)),
     ;
 
     private static final int[] BASE_DURABILITY;

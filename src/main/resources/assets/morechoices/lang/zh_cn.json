@@ -19,5 +19,9 @@
     "item.morechoices.hellstone_nugget": "狱石粒",
     "item.morechoices.copper_nugget": "铜粒",
     "block.morechoices.hellstone_block": "狱石块",
-    "item.morechoices.hellstone_block": "狱石块"
+    "item.morechoices.hellstone_block": "狱石块",
+    "item.morechoices.hellstone_helmet": "狱石头盔",
+    "item.morechoices.hellstone_chestplate": "狱石胸甲",
+    "item.morechoices.hellstone_leggings": "狱石护腿",
+    "item.morechoices.hellstone_boots": "狱石靴子"
 }
