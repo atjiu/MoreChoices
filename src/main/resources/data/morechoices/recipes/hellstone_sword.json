@@ -16,6 +16,6 @@
     "result": {
         "item": "morechoices:hellstone_sword",
         "type": "minecraft:item_nbt",
-        "nbt": "{Enchantments:[{lvl:2s,id:\"minecraft:fire_aspect\"}]}"
+        "nbt": "{Enchantments:[{lvl:1s,id:\"minecraft:fire_aspect\"}]}"
     }
 }

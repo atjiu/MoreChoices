@@ -29,7 +29,7 @@ public class ModRecipeResultMixin {
             NbtCompound itemNbt = new NbtCompound();
             itemNbt.put("tag", nbt);
             itemNbt.putString("id", JsonHelper.getString(json, "item"));
-            itemNbt.putInt("count", count);
+            itemNbt.putInt("Count", count);
             cir.setReturnValue(ItemStack.fromNbt(itemNbt));
         }
     }
