@@ -1,20 +1,67 @@
 package com.tomoya42.morechoices.util;
 
+import com.google.common.collect.ImmutableMap;
 import com.tomoya42.morechoices.item.ModItems;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.village.TradeOffer;
+import net.minecraft.village.TradeOffers;
 import net.minecraft.village.VillagerProfession;
 
 public class ModRegistries {
 
     public static void registerCustomTraders() {
+        // farmer villager
         TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1, factories -> {
-            factories.add((entity, random) -> new TradeOffer(
-                    new ItemStack(ModItems.SWEET_POTATO, 24),
-                    new ItemStack(Items.EMERALD, 1), 16, 2, 0.05f
-            ));
+            factories.add((entity, random) -> new TradeOffers.BuyForOneEmeraldFactory(ModItems.SWEET_POTATO, 24, 16, 2).create(entity, random));
+        });
+
+        // armorer villager
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.ARMORER, 1, factories -> {
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(ModItems.COPPER_HELMET), 5, 1, 12, 1, 0.2f).create(entity, random));
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(ModItems.COPPER_CHESTPLATE), 9, 1, 12, 1, 0.2f).create(entity, random));
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(ModItems.COPPER_LEGGINGS), 7, 1, 12, 1, 0.2f).create(entity, random));
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(ModItems.COPPER_BOOTS), 4, 1, 12, 1, 0.2f).create(entity, random));
+        });
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.ARMORER, 2, factories -> {
+            factories.add((entity, random) -> new TradeOffers.BuyForOneEmeraldFactory(Items.COPPER_INGOT, 4, 12, 10).create(entity, random));
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(ModItems.HELLSTONE_LEGGINGS), 9, 1, 12, 1, 0.2f).create(entity, random));
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(ModItems.HELLSTONE_BOOTS), 6, 1, 12, 1, 0.2f).create(entity, random));
+        });
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.ARMORER, 3, factories -> {
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(ModItems.HELLSTONE_HELMET), 7, 1, 12, 1, 0.2f).create(entity, random));
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(ModItems.HELLSTONE_CHESTPLATE), 11, 1, 12, 1, 0.2f).create(entity, random));
+        });
+
+        // toolsmith villager
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.TOOLSMITH, 2, factories -> {
+            factories.add((entity, random) -> new TradeOffers.BuyForOneEmeraldFactory(Items.COPPER_INGOT, 4, 12, 10).create(entity, random));
+        });
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.TOOLSMITH, 3, factories -> {
+            factories.add((entity, random) -> new TradeOffers.SellEnchantedToolFactory(ModItems.COPPER_AXE, 1, 3, 10, 0.2f).create(entity, random));
+            factories.add((entity, random) -> new TradeOffers.SellEnchantedToolFactory(ModItems.COPPER_SHOVEL, 2, 3, 10, 0.2f).create(entity, random));
+            factories.add((entity, random) -> new TradeOffers.SellEnchantedToolFactory(ModItems.COPPER_PICKAXE, 3, 3, 10, 0.2f).create(entity, random));
+        });
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.TOOLSMITH, 4, factories -> {
+            factories.add((entity, random) -> new TradeOffers.SellEnchantedToolFactory(ModItems.HELLSTONE_HOE, 2, 3, 10, 0.2f).create(entity, random));
+            factories.add((entity, random) -> new TradeOffers.SellEnchantedToolFactory(ModItems.HELLSTONE_AXE, 2, 3, 10, 0.2f).create(entity, random));
+            factories.add((entity, random) -> new TradeOffers.SellEnchantedToolFactory(ModItems.HELLSTONE_SHOVEL, 3, 3, 10, 0.2f).create(entity, random));
+            factories.add((entity, random) -> new TradeOffers.SellEnchantedToolFactory(ModItems.HELLSTONE_PICKAXE, 4, 3, 10, 0.2f).create(entity, random));
+        });
+
+        // weaponsmith villager
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.WEAPONSMITH, 1, factories -> {
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(ModItems.COPPER_AXE), 3, 1, 12, 1, 0.2f).create(entity, random));
+            factories.add((entity, random) -> new TradeOffers.SellEnchantedToolFactory(ModItems.COPPER_SWORD, 2, 3, 1).create(entity, random));
+        });
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.WEAPONSMITH, 2, factories -> {
+            factories.add((entity, random) -> new TradeOffers.BuyForOneEmeraldFactory(Items.COPPER_INGOT, 4, 12, 10).create(entity, random));
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(ModItems.HELLSTONE_AXE), 4, 1, 12, 1, 0.2f).create(entity, random));
+            factories.add((entity, random) -> new TradeOffers.SellEnchantedToolFactory(ModItems.HELLSTONE_SWORD, 4, 3, 1).create(entity, random));
+        });
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.WEAPONSMITH, 3, factories -> {
+            factories.add((entity, random) -> new TradeOffers.SellEnchantedToolFactory(ModItems.AMETHYST_SWORD, 5, 3, 1).create(entity, random));
         });
     }
 }

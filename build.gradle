@@ -69,10 +69,15 @@ java {
     targetCompatibility = JavaVersion.VERSION_17
 }
 
+static def releaseTime() {
+    return new Date().format("YYYYMMddHHmm", TimeZone.default)
+}
+
 jar {
     from("LICENSE") {
         rename { "${it}_${project.base.archivesName.get()}" }
     }
+    version = "${minecraft_version}-${releaseTime()}"
 }
 
 // configure the maven publication
