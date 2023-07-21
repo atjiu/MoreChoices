@@ -10,6 +10,8 @@
         "X X"
     ],
     "result": {
-        "item": "morechoices:hellstone_boots"
+        "item": "morechoices:hellstone_boots",
+        "type": "minecraft:item_nbt",
+        "nbt": "{Enchantments:[{lvl:4s,id:\"minecraft:fire_protection\"}]}"
     }
 }

@@ -23,5 +23,10 @@
     "item.morechoices.hellstone_helmet": "Hell Stone Helmet",
     "item.morechoices.hellstone_chestplate": "Hell Stone ChestPlate",
     "item.morechoices.hellstone_leggings": "Hell Stone Leggings",
-    "item.morechoices.hellstone_boots": "Hell Stone Boots"
+    "item.morechoices.hellstone_boots": "Hell Stone Boots",
+    "item.morechoices.hellstone_sword": "Hell Stone Sword",
+    "item.morechoices.hellstone_shovel": "Hell Stone Shovel",
+    "item.morechoices.hellstone_axe": "Hell Stone Axe",
+    "item.morechoices.hellstone_pickaxe": "Hell Stone Pickaxe",
+    "item.morechoices.hellstone_hoe": "Hell Stone Hoe"
 }

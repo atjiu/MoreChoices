@@ -11,6 +11,8 @@
         "XXX"
     ],
     "result": {
-        "item": "morechoices:hellstone_chestplate"
+        "item": "morechoices:hellstone_chestplate",
+        "type": "minecraft:item_nbt",
+        "nbt": "{Enchantments:[{lvl:4s,id:\"minecraft:fire_protection\"}]}"
     }
 }

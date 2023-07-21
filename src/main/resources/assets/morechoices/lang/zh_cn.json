@@ -23,5 +23,10 @@
     "item.morechoices.hellstone_helmet": "狱石头盔",
     "item.morechoices.hellstone_chestplate": "狱石胸甲",
     "item.morechoices.hellstone_leggings": "狱石护腿",
-    "item.morechoices.hellstone_boots": "狱石靴子"
+    "item.morechoices.hellstone_boots": "狱石靴子",
+    "item.morechoices.hellstone_sword": "狱石剑",
+    "item.morechoices.hellstone_shovel": "狱石锹",
+    "item.morechoices.hellstone_axe": "狱石斧",
+    "item.morechoices.hellstone_pickaxe": "狱石镐",
+    "item.morechoices.hellstone_hoe": "狱石锄"
 }
