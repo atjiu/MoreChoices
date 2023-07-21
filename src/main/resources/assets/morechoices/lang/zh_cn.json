@@ -15,5 +15,9 @@
     "block.morechoices.hellstone_ore": "狱石矿",
     "item.morechoices.hellstone_ore": "狱石矿",
     "item.morechoices.raw_hellstone": "粗狱石矿",
-    "item.morechoices.hellstone_ingot": "狱石锭"
+    "item.morechoices.hellstone_ingot": "狱石锭",
+    "item.morechoices.hellstone_nugget": "狱石粒",
+    "item.morechoices.copper_nugget": "铜粒",
+    "block.morechoices.hellstone_block": "狱石块",
+    "item.morechoices.hellstone_block": "狱石块"
 }

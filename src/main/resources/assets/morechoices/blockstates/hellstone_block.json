@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "morechoices:block/hellstone_block"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "hellstone_ingot",
+    "key": {
+        "#": {
+            "item": "morechoices:hellstone_nugget"
+        }
+    },
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "result": {
+        "item": "morechoices:hellstone_ingot"
+    }
+}

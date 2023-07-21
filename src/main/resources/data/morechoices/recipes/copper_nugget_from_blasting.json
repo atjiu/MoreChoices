@@ -1,0 +1,35 @@
+{
+    "type": "minecraft:blasting",
+    "cookingtime": 100,
+    "experience": 0.1,
+    "ingredient": [
+        {
+            "item": "morechoices:copper_pickaxe"
+        },
+        {
+            "item": "morechoices:copper_shovel"
+        },
+        {
+            "item": "morechoices:copper_axe"
+        },
+        {
+            "item": "morechoices:copper_hoe"
+        },
+        {
+            "item": "morechoices:copper_sword"
+        },
+        {
+            "item": "morechoices:copper_helmet"
+        },
+        {
+            "item": "morechoices:copper_chestplate"
+        },
+        {
+            "item": "morechoices:copper_leggings"
+        },
+        {
+            "item": "morechoices:copper_boots"
+        }
+    ],
+    "result": "morechoices:copper_nugget"
+}

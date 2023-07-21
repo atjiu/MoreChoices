@@ -48,7 +48,12 @@ public class ModItems {
             new Item(new Item.Settings().group(ItemGroup.MATERIALS)));
     public final static Item HELLSTONE_ORE = Registry.register(Registry.ITEM, new Identifier(MoreChoicesMod.MOD_ID, "hellstone_ore"),
             new BlockItem(ModBlocks.HELLSTONE_ORE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
-
+    public final static Item HELLSTONE_NUGGET = Registry.register(Registry.ITEM, new Identifier(MoreChoicesMod.MOD_ID, "hellstone_nugget"),
+            new Item(new Item.Settings().group(ItemGroup.MATERIALS)));
+    public final static Item COPPER_NUGGET = Registry.register(Registry.ITEM, new Identifier(MoreChoicesMod.MOD_ID, "copper_nugget"),
+            new Item(new Item.Settings().group(ItemGroup.MATERIALS)));
+    public final static Item HELLSTONE_BLOCK = Registry.register(Registry.ITEM, new Identifier(MoreChoicesMod.MOD_ID, "hellstone_block"),
+            new BlockItem(ModBlocks.HELLSTONE_BLOCK, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS)));
 
     public static void init() {
 

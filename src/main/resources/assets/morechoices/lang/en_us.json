@@ -15,5 +15,9 @@
     "block.morechoices.hellstone_ore": "Hell Stone Ore",
     "item.morechoices.hellstone_ore": "Hell Stone Ore",
     "item.morechoices.raw_hellstone": "Raw Hell Stone",
-    "item.morechoices.hellstone_ingot": "Hell Stone Ingot"
+    "item.morechoices.hellstone_ingot": "Hell Stone Ingot",
+    "item.morechoices.hellstone_nugget": "Hell Stone Nugget",
+    "item.morechoices.copper_nugget": "Copper Nugget",
+    "block.morechoices.hellstone_block": "Hell Stone Block",
+    "item.morechoices.hellstone_block": "Hell Stone Block"
 }

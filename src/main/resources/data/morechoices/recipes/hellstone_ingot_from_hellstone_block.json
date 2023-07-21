@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "iron_ingot",
+    "ingredients": [
+        {
+            "item": "morechoices:hellstone_block"
+        }
+    ],
+    "result": {
+        "count": 9,
+        "item": "morechoices:hellstone_ingot"
+    }
+}
