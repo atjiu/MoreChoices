@@ -1,10 +1,10 @@
 package com.tomoya42.morechoices;
 
 import com.tomoya42.morechoices.block.ModBlocks;
+import com.tomoya42.morechoices.item.ModItemGroup;
 import com.tomoya42.morechoices.item.ModItems;
 import com.tomoya42.morechoices.util.ModLootTableModifiers;
 import com.tomoya42.morechoices.util.ModRegistries;
-import com.tomoya42.morechoices.world.feature.ModConfiguredFeatures;
 import com.tomoya42.morechoices.world.gen.ModOreGeneration;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -19,11 +19,11 @@ public class MoreChoicesMod implements ModInitializer {
     public void onInitialize() {
         LOGGER.info("Hello Fabric world!");
 
-        ModConfiguredFeatures.init();
         ModOreGeneration.generateOres();
 
         ModItems.init();
         ModBlocks.init();
+        ModItemGroup.init();
 
         ModLootTableModifiers.modifyLootTables();
         ModRegistries.registerCustomTraders();

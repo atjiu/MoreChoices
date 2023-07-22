@@ -1,12 +1,12 @@
 {
-    "required": true,
-    "package": "com.tomoya42.morechoices.mixin",
-    "compatibilityLevel": "JAVA_17",
-    "mixins": [
-        "ModRecipeResultMixin",
-        "MoreChoicesMixin"
-    ],
-    "injectors": {
-        "defaultRequire": 1
-    }
+  "required": true,
+  "package": "com.tomoya42.morechoices.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "server.ModRecipeResultMixin",
+    "server.MoreChoicesMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
 }

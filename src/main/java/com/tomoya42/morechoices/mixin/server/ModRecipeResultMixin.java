@@ -1,4 +1,4 @@
-package com.tomoya42.morechoices.mixin;
+package com.tomoya42.morechoices.mixin.server;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
