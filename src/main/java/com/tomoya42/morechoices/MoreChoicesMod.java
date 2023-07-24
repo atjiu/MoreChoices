@@ -5,6 +5,7 @@ import com.tomoya42.morechoices.item.ModItemGroup;
 import com.tomoya42.morechoices.item.ModItems;
 import com.tomoya42.morechoices.util.ModLootTableModifiers;
 import com.tomoya42.morechoices.util.ModRegistries;
+import com.tomoya42.morechoices.villager.ModVillagers;
 import com.tomoya42.morechoices.world.gen.ModOreGeneration;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -24,6 +25,8 @@ public class MoreChoicesMod implements ModInitializer {
         ModItems.init();
         ModBlocks.init();
         ModItemGroup.init();
+        ModVillagers.init();
+        ModVillagers.registerTrades();
 
         ModLootTableModifiers.modifyLootTables();
         ModRegistries.registerCustomTraders();
