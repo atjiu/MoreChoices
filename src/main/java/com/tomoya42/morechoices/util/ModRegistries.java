@@ -1,11 +1,9 @@
 package com.tomoya42.morechoices.util;
 
-import com.google.common.collect.ImmutableMap;
 import com.tomoya42.morechoices.item.ModItems;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.village.TradeOffer;
 import net.minecraft.village.TradeOffers;
 import net.minecraft.village.VillagerProfession;
 
@@ -62,6 +60,11 @@ public class ModRegistries {
         });
         TradeOfferHelper.registerVillagerOffers(VillagerProfession.WEAPONSMITH, 3, factories -> {
             factories.add((entity, random) -> new TradeOffers.SellEnchantedToolFactory(ModItems.AMETHYST_SWORD, 5, 3, 1).create(entity, random));
+        });
+
+        // cleric villager
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.CLERIC, 1, factories -> {
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.GUNPOWDER), 1, 2, 12, 1, 0.05f).create(entity, random));
         });
     }
 }
