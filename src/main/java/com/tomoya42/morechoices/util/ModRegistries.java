@@ -13,6 +13,7 @@ public class ModRegistries {
         // farmer villager
         TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1, factories -> {
             factories.add((entity, random) -> new TradeOffers.BuyForOneEmeraldFactory(ModItems.SWEET_POTATO, 24, 16, 2).create(entity, random));
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.BONE_MEAL), 1, 2, 12, 1, 0.05f).create(entity, random));
         });
 
         // armorer villager
