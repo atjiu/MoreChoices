@@ -31,5 +31,6 @@
     "item.morechoices.hellstone_hoe": "狱石锄",
     "itemgroup.more_choices": "更多选项",
     "entity.minecraft.villager.carpenter": "木匠",
-    "entity.minecraft.villager.nether_envoy": "阴差"
+    "entity.minecraft.villager.nether_envoy": "阴差",
+    "entity.minecraft.villager.gardener": "花匠"
 }

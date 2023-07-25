@@ -31,5 +31,6 @@
     "item.morechoices.hellstone_hoe": "Hell Stone Hoe",
     "itemgroup.more_choices": "More Choices",
     "entity.minecraft.villager.carpenter": "Carpenter",
-    "entity.minecraft.villager.nether_envoy": "Nether Envoy"
+    "entity.minecraft.villager.nether_envoy": "Nether Envoy",
+    "entity.minecraft.villager.gardener": "Gardener"
 }

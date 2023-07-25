@@ -2,6 +2,7 @@
     "replace": false,
     "values": [
         "morechoices:carpenter_poi",
-        "morechoices:nether_envoy_poi"
+        "morechoices:nether_envoy_poi",
+        "morechoices:gardener_poi"
     ]
 }
