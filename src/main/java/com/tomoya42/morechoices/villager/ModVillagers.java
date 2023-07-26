@@ -70,6 +70,7 @@ public class ModVillagers {
             factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.AZALEA), 15, 1, 12, 10, 0.05f).create(entity, random));
             factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.FLOWERING_AZALEA), 19, 1, 12, 10, 0.05f).create(entity, random));
             factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.MANGROVE_PROPAGULE), 19, 1, 12, 10, 0.05f).create(entity, random));
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.NAME_TAG), 1, 1, 12, 10, 0.05f).create(entity, random));
         });
 
         // NETHER ENVOY
