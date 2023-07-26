@@ -32,5 +32,6 @@
     "itemgroup.more_choices": "More Choices",
     "entity.minecraft.villager.carpenter": "Carpenter",
     "entity.minecraft.villager.nether_envoy": "Nether Envoy",
-    "entity.minecraft.villager.gardener": "Gardener"
+    "entity.minecraft.villager.gardener": "Gardener",
+    "entity.minecraft.villager.end_envoy": "End Envoy"
 }

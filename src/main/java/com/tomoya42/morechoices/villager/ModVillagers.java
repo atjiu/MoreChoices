@@ -24,6 +24,7 @@ public class ModVillagers {
     public static final PointOfInterestType NETHER_ENVOY_POI = registerPOI("nether_envoy_poi", Blocks.CRYING_OBSIDIAN);
     public static final PointOfInterestType CARPENTER_POI = registerPOI("carpenter_poi", Blocks.CRAFTING_TABLE);
     public static final PointOfInterestType GARDENER_POI = registerPOI("gardener_poi", Blocks.FLOWER_POT);
+    public static final PointOfInterestType END_ENVOY_POI = registerPOI("end_envoy_poi", Blocks.END_ROD);
 
     public static final VillagerProfession NETHER_ENVOY = registerProfession("nether_envoy",
             RegistryKey.of(Registries.POINT_OF_INTEREST_TYPE.getKey(), new Identifier(MoreChoicesMod.MOD_ID, "nether_envoy_poi")));
@@ -31,6 +32,8 @@ public class ModVillagers {
             RegistryKey.of(Registries.POINT_OF_INTEREST_TYPE.getKey(), new Identifier(MoreChoicesMod.MOD_ID, "carpenter_poi")));
     public static final VillagerProfession GARDENER = registerProfession("gardener",
             RegistryKey.of(Registries.POINT_OF_INTEREST_TYPE.getKey(), new Identifier(MoreChoicesMod.MOD_ID, "gardener_poi")));
+    public static final VillagerProfession END_ENVOY = registerProfession("end_envoy",
+            RegistryKey.of(Registries.POINT_OF_INTEREST_TYPE.getKey(), new Identifier(MoreChoicesMod.MOD_ID, "end_envoy_poi")));
 
     public static VillagerProfession registerProfession(String name, RegistryKey<PointOfInterestType> type) {
         return Registry.register(Registries.VILLAGER_PROFESSION, new Identifier(MoreChoicesMod.MOD_ID, name),
@@ -125,6 +128,27 @@ public class ModVillagers {
             factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Blocks.WITHER_ROSE/*凋灵玫瑰*/), 32, 1, 1, 20, 0.05f).create(entity, random));
             factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.TORCHFLOWER/*火把花*/), 32, 1, 1, 20, 0.05f).create(entity, random));
             factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.PITCHER_PLANT/*瓶子草*/), 32, 1, 1, 20, 0.05f).create(entity, random));
+        });
+
+        // END ENVOY
+        TradeOfferHelper.registerVillagerOffers(END_ENVOY, 1, factories -> {
+            factories.add((entity, random) -> new TradeOffers.BuyForOneEmeraldFactory(Items.ENDER_PEARL/*末影珍珠*/, 4, 16, 2).create(entity, random));
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.END_STONE/*末地石*/), 1, 4, 16, 1, 0.2f).create(entity, random));
+        });
+        TradeOfferHelper.registerVillagerOffers(END_ENVOY, 2, factories -> {
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.CHORUS_FLOWER/*紫颂花*/), 4, 1, 20, 4, 0.05f).create(entity, random));
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.END_ROD/*末地烛*/), 2, 1, 20, 4, 0.05f).create(entity, random));
+        });
+        TradeOfferHelper.registerVillagerOffers(END_ENVOY, 3, factories -> {
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.DRAGON_BREATH/*龙息*/), 1, 1, 20, 7, 0.05f).create(entity, random));
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.SHULKER_SHELL/*潜影壳*/), 7, 1, 16, 7, 0.05f).create(entity, random));
+        });
+        TradeOfferHelper.registerVillagerOffers(END_ENVOY, 4, factories -> {
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.DRAGON_HEAD/*龙首*/), 32, 1, 1, 13, 0.05f).create(entity, random));
+        });
+        TradeOfferHelper.registerVillagerOffers(END_ENVOY, 5, factories -> {
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.DRAGON_EGG/*龙蛋*/), 64, 1, 1, 17, 0.05f).create(entity, random));
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.ELYTRA/*鞘翅*/), 64, 1, 1, 17, 0.05f).create(entity, random));
         });
     }
 

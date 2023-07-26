@@ -29,8 +29,9 @@
     "item.morechoices.hellstone_axe": "狱石斧",
     "item.morechoices.hellstone_pickaxe": "狱石镐",
     "item.morechoices.hellstone_hoe": "狱石锄",
-    "itemgroup.more_choices": "更多选项",
+    "itemgroup.more_choices": "更多选择",
     "entity.minecraft.villager.carpenter": "木匠",
     "entity.minecraft.villager.nether_envoy": "阴差",
-    "entity.minecraft.villager.gardener": "花匠"
+    "entity.minecraft.villager.gardener": "花匠",
+    "entity.minecraft.villager.end_envoy": "末地使者"
 }

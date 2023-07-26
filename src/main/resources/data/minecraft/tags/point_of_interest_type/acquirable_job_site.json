@@ -3,6 +3,7 @@
     "values": [
         "morechoices:carpenter_poi",
         "morechoices:nether_envoy_poi",
-        "morechoices:gardener_poi"
+        "morechoices:gardener_poi",
+        "morechoices:end_envoy_poi"
     ]
 }
