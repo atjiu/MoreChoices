@@ -1,6 +1,6 @@
 {
     "required": true,
-    "package": "com.tomoya42.morechoices.mixin",
+    "package": "com.example.morechoices.mixin",
     "compatibilityLevel": "JAVA_17",
     "mixins": [
         "server.ModRecipeResultMixin",
