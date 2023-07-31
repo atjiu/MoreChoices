@@ -48,6 +48,11 @@ public class ModItems {
     public final static Item COPPER_NUGGET = register("copper_nugget", new Item(new Item.Settings()));
     public final static Item HELLSTONE_BLOCK = register("hellstone_block", new BlockItem(ModBlocks.HELLSTONE_BLOCK, new Item.Settings()));
 
+    // FOOD
+    public final static Item CATPAW_COOKIE = register("catpaw_cookie", new Item(new Item.Settings().food(ModFoodComponents.CATPAW_COOKIE)));
+    public final static Item FRIED_DUMPLING = register("fried_dumpling", new Item(new Item.Settings().food(ModFoodComponents.FRIED_DUMPLING)));
+    public final static Item WHEAT_FLOUR = register("wheat_flour", new Item(new Item.Settings()));
+
     private static Item register(String name, Item item) {
         return register(new Identifier(MoreChoicesMod.MOD_ID, name), item);
     }

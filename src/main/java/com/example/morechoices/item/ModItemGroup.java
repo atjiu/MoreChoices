@@ -46,18 +46,15 @@ public class ModItemGroup {
                         entries.add(ModItems.HELLSTONE_NUGGET);
                         entries.add(ModItems.COPPER_NUGGET);
 
+                        // FOOD
+                        entries.add(ModItems.CATPAW_COOKIE);
+                        entries.add(ModItems.FRIED_DUMPLING);
+                        entries.add(ModItems.WHEAT_FLOUR);
+
                         entries.add(ModBlocks.HELLSTONE_ORE);
                         entries.add(ModBlocks.HELLSTONE_BLOCK);
 
                     }).build());
-
-//    public static void registerItemGroups() {
-//        // Example of adding to existing Item Group
-//        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
-//            entries.add(ModItems.CITRINE);
-//            entries.add(ModItems.RAW_CITRINE);
-//        });
-//    }
 
     public static void init() {
     }

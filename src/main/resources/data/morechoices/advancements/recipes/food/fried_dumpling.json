@@ -1,0 +1,87 @@
+{
+    "parent": "minecraft:recipes/root",
+    "criteria": {
+        "has_raw_meat": {
+            "conditions": {
+                "items": [
+                    {
+                        "tags": [
+                            "morechoices:raw_meat"
+                        ]
+                    }
+                ]
+            },
+            "trigger": "minecraft:inventory_changed"
+        },
+        "has_egg": {
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "minecraft:egg"
+                        ]
+                    }
+                ]
+            },
+            "trigger": "minecraft:inventory_changed"
+        },
+        "has_carrot": {
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "minecraft:carrot"
+                        ]
+                    }
+                ]
+            },
+            "trigger": "minecraft:inventory_changed"
+        },
+        "has_wheat_flour": {
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "morechoices:wheat_flour"
+                        ]
+                    }
+                ]
+            },
+            "trigger": "minecraft:inventory_changed"
+        },
+        "has_fried_dumpling": {
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "morechoices:fried_dumpling"
+                        ]
+                    }
+                ]
+            },
+            "trigger": "minecraft:inventory_changed"
+        },
+        "has_the_recipe": {
+            "conditions": {
+                "recipe": "morechoices:fried_dumpling"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+        }
+    },
+    "requirements": [
+        [
+            "has_egg",
+            "has_carrot",
+            "has_raw_meat",
+            "has_wheat_flour",
+            "has_fried_dumpling",
+            "has_the_recipe"
+        ]
+    ],
+    "rewards": {
+        "recipes": [
+            "morechoices:fried_dumpling"
+        ]
+    },
+    "sends_telemetry_event": false
+}

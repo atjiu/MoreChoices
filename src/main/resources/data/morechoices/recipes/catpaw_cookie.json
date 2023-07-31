@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "minecraft:wheat"
+        },
+        {
+            "item": "minecraft:egg"
+        },
+        {
+            "item": "minecraft:sugar"
+        }
+    ],
+    "result": {
+        "item": "morechoices:catpaw_cookie"
+    }
+}

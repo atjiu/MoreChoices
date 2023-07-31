@@ -1,5 +1,6 @@
 package com.example.morechoices;
 
+import com.example.morechoices.block.ModBlockTags;
 import com.example.morechoices.block.ModBlocks;
 import com.example.morechoices.item.ModItemGroup;
 import com.example.morechoices.item.ModItems;
@@ -24,6 +25,7 @@ public class MoreChoicesMod implements ModInitializer {
 
         ModItems.init();
         ModBlocks.init();
+        ModBlockTags.init();
         ModItemGroup.init();
         ModVillagers.init();
         ModVillagers.registerTrades();
