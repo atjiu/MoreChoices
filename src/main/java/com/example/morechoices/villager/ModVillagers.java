@@ -21,7 +21,7 @@ import net.minecraft.world.poi.PointOfInterestType;
 
 public class ModVillagers {
 
-    public static final PointOfInterestType NETHER_ENVOY_POI = registerPOI("nether_envoy_poi", Blocks.CRYING_OBSIDIAN);
+    public static final PointOfInterestType NETHER_ENVOY_POI = registerPOI("nether_envoy_poi", Blocks.MAGMA_BLOCK);
     public static final PointOfInterestType CARPENTER_POI = registerPOI("carpenter_poi", Blocks.CRAFTING_TABLE);
     public static final PointOfInterestType GARDENER_POI = registerPOI("gardener_poi", Blocks.FLOWER_POT);
     public static final PointOfInterestType END_ENVOY_POI = registerPOI("end_envoy_poi", Blocks.END_ROD);
