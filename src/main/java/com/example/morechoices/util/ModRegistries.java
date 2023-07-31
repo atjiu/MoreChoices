@@ -13,7 +13,14 @@ public class ModRegistries {
         // farmer villager
         TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 1, factories -> {
             factories.add((entity, random) -> new TradeOffers.BuyForOneEmeraldFactory(ModItems.SWEET_POTATO, 24, 16, 2).create(entity, random));
+            factories.add((entity, random) -> new TradeOffers.BuyForOneEmeraldFactory(ModItems.PEPPER, 22, 16, 2).create(entity, random));
             factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.BONE_MEAL), 1, 2, 12, 1, 0.05f).create(entity, random));
+        });
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 2, factories -> {
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(ModItems.FRIED_DUMPLING), 1, 3, 12, 5, 0.2f).create(entity, random));
+        });
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 3, factories -> {
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(ModItems.CATPAW_COOKIE), 3, 15, 12, 10, 0.2f).create(entity, random));
         });
         TradeOfferHelper.registerVillagerOffers(VillagerProfession.FARMER, 5, factories -> {
             factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.GOLDEN_APPLE), 7, 1, 12, 20, 0.2f).create(entity, random));

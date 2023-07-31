@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "tag": "morechoices:raw_meat"
+        },
+        {
+            "item": "minecraft:carrot"
+        },
+        {
+            "item": "minecraft:egg"
+        },
+        {
+            "item": "morechoices:wheat_flour"
+        },
+        {
+            "item": "morechoices:paprika"
+        }
+    ],
+    "result": {
+        "item": "morechoices:spicy_fried_dumpling"
+    }
+}

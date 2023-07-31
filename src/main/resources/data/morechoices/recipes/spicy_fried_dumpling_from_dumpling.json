@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "category": "misc",
+    "ingredients": [
+        {
+            "item": "morechoices:fried_dumpling"
+        },
+        {
+            "item": "morechoices:paprika"
+        }
+    ],
+    "result": {
+        "item": "morechoices:spicy_fried_dumpling"
+    }
+}

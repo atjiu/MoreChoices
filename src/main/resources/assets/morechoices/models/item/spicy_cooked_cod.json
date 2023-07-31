@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "morechoices:item/spicy_cooked_cod"
+    }
+}

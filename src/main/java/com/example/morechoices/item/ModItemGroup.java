@@ -40,6 +40,7 @@ public class ModItemGroup {
 
                         entries.add(ModItems.SWEET_POTATO);
                         entries.add(ModItems.BAKED_SWEET_POTATO);
+                        entries.add(ModItems.PEPPER);
 
                         entries.add(ModItems.HELLSTONE_INGOT);
                         entries.add(ModItems.RAW_HELLSTONE);
@@ -50,6 +51,15 @@ public class ModItemGroup {
                         entries.add(ModItems.CATPAW_COOKIE);
                         entries.add(ModItems.FRIED_DUMPLING);
                         entries.add(ModItems.WHEAT_FLOUR);
+                        entries.add(ModItems.PAPRIKA);
+                        entries.add(ModItems.SPICY_FRIED_DUMPLING);
+                        entries.add(ModItems.SPICY_COOKED_BEEF);
+                        entries.add(ModItems.SPICY_COOKED_CHICKEN);
+                        entries.add(ModItems.SPICY_COOKED_COD);
+                        entries.add(ModItems.SPICY_COOKED_MUTTON);
+                        entries.add(ModItems.SPICY_COOKED_PORKCHOP);
+                        entries.add(ModItems.SPICY_COOKED_RABBIT);
+                        entries.add(ModItems.SPICY_COOKED_SALMON);
 
                         entries.add(ModBlocks.HELLSTONE_ORE);
                         entries.add(ModBlocks.HELLSTONE_BLOCK);

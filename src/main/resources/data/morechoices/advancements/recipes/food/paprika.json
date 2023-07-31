@@ -1,0 +1,48 @@
+{
+    "parent": "minecraft:recipes/root",
+    "criteria": {
+        "has_pepper": {
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "morechoices:pepper"
+                        ]
+                    }
+                ]
+            },
+            "trigger": "minecraft:inventory_changed"
+        },
+        "has_paprika": {
+            "conditions": {
+                "items": [
+                    {
+                        "items": [
+                            "morechoices:paprika"
+                        ]
+                    }
+                ]
+            },
+            "trigger": "minecraft:inventory_changed"
+        },
+        "has_the_recipe": {
+            "conditions": {
+                "recipe": "morechoices:paprika"
+            },
+            "trigger": "minecraft:recipe_unlocked"
+        }
+    },
+    "requirements": [
+        [
+            "has_pepper",
+            "has_paprika",
+            "has_the_recipe"
+        ]
+    ],
+    "rewards": {
+        "recipes": [
+            "morechoices:paprika"
+        ]
+    },
+    "sends_telemetry_event": false
+}

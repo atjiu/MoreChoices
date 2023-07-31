@@ -39,6 +39,7 @@ public class ModItems {
     // CROP
     public final static Item SWEET_POTATO = register("sweet_potato", new AliasedBlockItem(ModBlocks.SWEET_POTATOES, (new Item.Settings()).food(ModFoodComponents.SWEET_POTATO)));
     public final static Item BAKED_SWEET_POTATO = register("baked_sweet_potato", new AliasedBlockItem(ModBlocks.SWEET_POTATOES, (new Item.Settings()).food(ModFoodComponents.BAKED_SWEET_POTATO)));
+    public final static Item PEPPER = register("pepper", new AliasedBlockItem(ModBlocks.PEPPERS, (new Item.Settings()).food(ModFoodComponents.PEPPER)));
 
     // ORE
     public final static Item HELLSTONE_INGOT = register("hellstone_ingot", new Item(new Item.Settings()));
@@ -52,6 +53,15 @@ public class ModItems {
     public final static Item CATPAW_COOKIE = register("catpaw_cookie", new Item(new Item.Settings().food(ModFoodComponents.CATPAW_COOKIE)));
     public final static Item FRIED_DUMPLING = register("fried_dumpling", new Item(new Item.Settings().food(ModFoodComponents.FRIED_DUMPLING)));
     public final static Item WHEAT_FLOUR = register("wheat_flour", new Item(new Item.Settings()));
+    public final static Item PAPRIKA = register("paprika", new Item(new Item.Settings()));
+    public final static Item SPICY_FRIED_DUMPLING = register("spicy_fried_dumpling", new Item(new Item.Settings().food(ModFoodComponents.SPICY_FRIED_DUMPLING)));
+    public final static Item SPICY_COOKED_BEEF = register("spicy_cooked_beef", new Item(new Item.Settings().food(ModFoodComponents.SPICY_COOKED_BEEF)));
+    public final static Item SPICY_COOKED_CHICKEN = register("spicy_cooked_chicken", new Item(new Item.Settings().food(ModFoodComponents.SPICY_COOKED_CHICKEN)));
+    public final static Item SPICY_COOKED_COD = register("spicy_cooked_cod", new Item(new Item.Settings().food(ModFoodComponents.SPICY_COOKED_COD)));
+    public final static Item SPICY_COOKED_MUTTON = register("spicy_cooked_mutton", new Item(new Item.Settings().food(ModFoodComponents.SPICY_COOKED_MUTTON)));
+    public final static Item SPICY_COOKED_PORKCHOP = register("spicy_cooked_porkchop", new Item(new Item.Settings().food(ModFoodComponents.SPICY_COOKED_PORKCHOP)));
+    public final static Item SPICY_COOKED_RABBIT = register("spicy_cooked_rabbit", new Item(new Item.Settings().food(ModFoodComponents.SPICY_COOKED_RABBIT)));
+    public final static Item SPICY_COOKED_SALMON = register("spicy_cooked_salmon", new Item(new Item.Settings().food(ModFoodComponents.SPICY_COOKED_SALMON)));
 
     private static Item register(String name, Item item) {
         return register(new Identifier(MoreChoicesMod.MOD_ID, name), item);

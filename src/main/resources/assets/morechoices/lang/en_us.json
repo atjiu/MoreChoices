@@ -36,5 +36,16 @@
     "entity.minecraft.villager.carpenter": "Carpenter",
     "entity.minecraft.villager.nether_envoy": "Nether Envoy",
     "entity.minecraft.villager.gardener": "Gardener",
-    "entity.minecraft.villager.end_envoy": "End Envoy"
+    "entity.minecraft.villager.end_envoy": "End Envoy",
+    "block.morechoices.peppers": "Pepper",
+    "item.morechoices.pepper": "Pepper",
+    "item.morechoices.paprika": "Paprika",
+    "item.morechoices.spicy_fried_dumpling": "§cSpicy §rFried Dumpling",
+    "item.morechoices.spicy_cooked_beef": "§cSpicy §rSteak",
+    "item.morechoices.spicy_cooked_chicken": "§cSpicy §rRoast Chicken",
+    "item.morechoices.spicy_cooked_cod": "§cSpicy §rCooked Cod",
+    "item.morechoices.spicy_cooked_mutton": "§cSpicy §rCooked Mutton",
+    "item.morechoices.spicy_cooked_porkchop": "§cSpicy §rCooked Porkchop",
+    "item.morechoices.spicy_cooked_rabbit": "§cSpicy §rCooked Rabbit",
+    "item.morechoices.spicy_cooked_salmon": "§cSpicy §rCooked Salmon"
 }

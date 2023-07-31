@@ -36,5 +36,16 @@
     "entity.minecraft.villager.carpenter": "木匠",
     "entity.minecraft.villager.nether_envoy": "阴差",
     "entity.minecraft.villager.gardener": "花匠",
-    "entity.minecraft.villager.end_envoy": "末地使者"
+    "entity.minecraft.villager.end_envoy": "末地使者",
+    "block.morechoices.peppers": "辣椒",
+    "item.morechoices.pepper": "辣椒",
+    "item.morechoices.paprika": "辣椒粉",
+    "item.morechoices.spicy_fried_dumpling": "§c辣的 §r煎饺",
+    "item.morechoices.spicy_cooked_beef": "§c辣的 §r牛排",
+    "item.morechoices.spicy_cooked_chicken": "§c辣的 §r熟鸡肉",
+    "item.morechoices.spicy_cooked_cod": "§c辣的 §r熟鳕鱼",
+    "item.morechoices.spicy_cooked_mutton": "§c辣的 §r熟羊肉",
+    "item.morechoices.spicy_cooked_porkchop": "§c辣的 §r熟猪排",
+    "item.morechoices.spicy_cooked_rabbit": "§c辣的 §r熟兔肉",
+    "item.morechoices.spicy_cooked_salmon": "§c辣的 §r熟硅鱼"
 }

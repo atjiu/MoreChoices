@@ -11,7 +11,9 @@ public class MoreChoicesModClient implements ClientModInitializer {
     public void onInitializeClient() {
         // This entrypoint is suitable for setting up client-specific logic, such as rendering.
 
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SWEET_POTATOES, RenderLayer.getCutout());
-
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(),
+                ModBlocks.SWEET_POTATOES,
+                ModBlocks.PEPPERS
+        );
     }
 }
