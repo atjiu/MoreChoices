@@ -2,67 +2,71 @@ package com.example.morechoices.item;
 
 import com.example.morechoices.MoreChoicesMod;
 import com.example.morechoices.block.ModBlocks;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.item.*;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroup {
-    public static ItemGroup MORE_CHOICES = FabricItemGroup.builder(new Identifier(MoreChoicesMod.MOD_ID, "more_choices")).displayName(Text.translatable("itemgroup.more_choices"))
-            .icon(() -> new ItemStack(Items.COPPER_INGOT)).entries((displayContext, entries) -> {
-                entries.add(ModItems.AMETHYST_SWORD);
-                entries.add(ModItems.COPPER_SWORD);
-                entries.add(ModItems.COPPER_SHOVEL);
-                entries.add(ModItems.COPPER_PICKAXE);
-                entries.add(ModItems.COPPER_AXE);
-                entries.add(ModItems.COPPER_HOE);
+    public static ItemGroup MORE_CHOICES = FabricItemGroup.builder(new Identifier(MoreChoicesMod.MOD_ID, "more_choices"))
+            .displayName(Text.translatable("itemgroup.more_choices"))
+            .icon(() -> new ItemStack(Items.COPPER_INGOT))
+            .build();
 
-                entries.add(ModItems.HELLSTONE_SWORD);
-                entries.add(ModItems.HELLSTONE_SHOVEL);
-                entries.add(ModItems.HELLSTONE_PICKAXE);
-                entries.add(ModItems.HELLSTONE_AXE);
-                entries.add(ModItems.HELLSTONE_HOE);
-
-                entries.add(ModItems.COPPER_HELMET);
-                entries.add(ModItems.COPPER_CHESTPLATE);
-                entries.add(ModItems.COPPER_LEGGINGS);
-                entries.add(ModItems.COPPER_BOOTS);
-
-                entries.add(ModItems.HELLSTONE_HELMET);
-                entries.add(ModItems.HELLSTONE_CHESTPLATE);
-                entries.add(ModItems.HELLSTONE_LEGGINGS);
-                entries.add(ModItems.HELLSTONE_BOOTS);
-
-                entries.add(ModItems.SWEET_POTATO);
-                entries.add(ModItems.BAKED_SWEET_POTATO);
-                entries.add(ModItems.PEPPER);
-
-                entries.add(ModItems.HELLSTONE_INGOT);
-                entries.add(ModItems.RAW_HELLSTONE);
-                entries.add(ModItems.HELLSTONE_NUGGET);
-                entries.add(ModItems.COPPER_NUGGET);
-
-                // FOOD
-                entries.add(ModItems.CATPAW_COOKIE);
-                entries.add(ModItems.FRIED_DUMPLING);
-                entries.add(ModItems.WHEAT_FLOUR);
-                entries.add(ModItems.PAPRIKA);
-                entries.add(ModItems.SPICY_FRIED_DUMPLING);
-                entries.add(ModItems.SPICY_COOKED_BEEF);
-                entries.add(ModItems.SPICY_COOKED_CHICKEN);
-                entries.add(ModItems.SPICY_COOKED_COD);
-                entries.add(ModItems.SPICY_COOKED_MUTTON);
-                entries.add(ModItems.SPICY_COOKED_PORKCHOP);
-                entries.add(ModItems.SPICY_COOKED_RABBIT);
-                entries.add(ModItems.SPICY_COOKED_SALMON);
-
-                entries.add(ModBlocks.HELLSTONE_ORE);
-                entries.add(ModBlocks.HELLSTONE_BLOCK);
-
-            }).build();
+    public static void add(Item item) {
+        ItemGroupEvents.modifyEntriesEvent(MORE_CHOICES).register(entries -> entries.add(item));
+    }
 
     public static void init() {
+        add(ModItems.AMETHYST_SWORD);
+        add(ModItems.COPPER_SWORD);
+        add(ModItems.COPPER_SHOVEL);
+        add(ModItems.COPPER_PICKAXE);
+        add(ModItems.COPPER_AXE);
+        add(ModItems.COPPER_HOE);
+
+        add(ModItems.HELLSTONE_SWORD);
+        add(ModItems.HELLSTONE_SHOVEL);
+        add(ModItems.HELLSTONE_PICKAXE);
+        add(ModItems.HELLSTONE_AXE);
+        add(ModItems.HELLSTONE_HOE);
+
+        add(ModItems.COPPER_HELMET);
+        add(ModItems.COPPER_CHESTPLATE);
+        add(ModItems.COPPER_LEGGINGS);
+        add(ModItems.COPPER_BOOTS);
+
+        add(ModItems.HELLSTONE_HELMET);
+        add(ModItems.HELLSTONE_CHESTPLATE);
+        add(ModItems.HELLSTONE_LEGGINGS);
+        add(ModItems.HELLSTONE_BOOTS);
+
+        add(ModItems.SWEET_POTATO);
+        add(ModItems.BAKED_SWEET_POTATO);
+        add(ModItems.PEPPER);
+
+        add(ModItems.HELLSTONE_INGOT);
+        add(ModItems.RAW_HELLSTONE);
+        add(ModItems.HELLSTONE_NUGGET);
+        add(ModItems.COPPER_NUGGET);
+
+        // FOOD
+        add(ModItems.CATPAW_COOKIE);
+        add(ModItems.FRIED_DUMPLING);
+        add(ModItems.WHEAT_FLOUR);
+        add(ModItems.PAPRIKA);
+        add(ModItems.SPICY_FRIED_DUMPLING);
+        add(ModItems.SPICY_COOKED_BEEF);
+        add(ModItems.SPICY_COOKED_CHICKEN);
+        add(ModItems.SPICY_COOKED_COD);
+        add(ModItems.SPICY_COOKED_MUTTON);
+        add(ModItems.SPICY_COOKED_PORKCHOP);
+        add(ModItems.SPICY_COOKED_RABBIT);
+        add(ModItems.SPICY_COOKED_SALMON);
+
+        add(new BlockItem(ModBlocks.HELLSTONE_ORE, new FabricItemSettings()));
+        add(new BlockItem(ModBlocks.HELLSTONE_BLOCK, new FabricItemSettings()));
     }
 }

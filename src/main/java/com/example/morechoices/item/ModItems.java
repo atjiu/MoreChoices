@@ -4,6 +4,7 @@ import com.example.morechoices.MoreChoicesMod;
 import com.example.morechoices.block.ModBlocks;
 import com.example.morechoices.material.ModArmorMaterial;
 import com.example.morechoices.material.ModToolMaterial;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -26,15 +27,15 @@ public class ModItems {
     public final static Item HELLSTONE_HOE = register("hellstone_hoe", new HoeItem(ModToolMaterial.HELLSTONE, -2, -1.0f, new Item.Settings()));
 
     // ARMOR
-    public final static Item COPPER_HELMET = register("copper_helmet", new ArmorItem(ModArmorMaterial.COPPER, ArmorItem.Type.HELMET, new Item.Settings()));
-    public final static Item COPPER_CHESTPLATE = register("copper_chestplate", new ArmorItem(ModArmorMaterial.COPPER, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
-    public final static Item COPPER_LEGGINGS = register("copper_leggings", new ArmorItem(ModArmorMaterial.COPPER, ArmorItem.Type.LEGGINGS, new Item.Settings()));
-    public final static Item COPPER_BOOTS = register("copper_boots", new ArmorItem(ModArmorMaterial.COPPER, ArmorItem.Type.BOOTS, new Item.Settings()));
+    public final static Item COPPER_HELMET = register("copper_helmet", new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlot.HEAD, new Item.Settings()));
+    public final static Item COPPER_CHESTPLATE = register("copper_chestplate", new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlot.CHEST, new Item.Settings()));
+    public final static Item COPPER_LEGGINGS = register("copper_leggings", new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlot.LEGS, new Item.Settings()));
+    public final static Item COPPER_BOOTS = register("copper_boots", new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlot.FEET, new Item.Settings()));
 
-    public final static Item HELLSTONE_HELMET = register("hellstone_helmet", new ArmorItem(ModArmorMaterial.HELLSTONE, ArmorItem.Type.HELMET, new Item.Settings()));
-    public final static Item HELLSTONE_CHESTPLATE = register("hellstone_chestplate", new ArmorItem(ModArmorMaterial.HELLSTONE, ArmorItem.Type.CHESTPLATE, new Item.Settings()));
-    public final static Item HELLSTONE_LEGGINGS = register("hellstone_leggings", new ArmorItem(ModArmorMaterial.HELLSTONE, ArmorItem.Type.LEGGINGS, new Item.Settings()));
-    public final static Item HELLSTONE_BOOTS = register("hellstone_boots", new ArmorItem(ModArmorMaterial.HELLSTONE, ArmorItem.Type.BOOTS, new Item.Settings()));
+    public final static Item HELLSTONE_HELMET = register("hellstone_helmet", new ArmorItem(ModArmorMaterial.HELLSTONE, EquipmentSlot.HEAD, new Item.Settings()));
+    public final static Item HELLSTONE_CHESTPLATE = register("hellstone_chestplate", new ArmorItem(ModArmorMaterial.HELLSTONE, EquipmentSlot.CHEST, new Item.Settings()));
+    public final static Item HELLSTONE_LEGGINGS = register("hellstone_leggings", new ArmorItem(ModArmorMaterial.HELLSTONE, EquipmentSlot.LEGS, new Item.Settings()));
+    public final static Item HELLSTONE_BOOTS = register("hellstone_boots", new ArmorItem(ModArmorMaterial.HELLSTONE, EquipmentSlot.FEET, new Item.Settings()));
 
     // CROP
     public final static Item SWEET_POTATO = register("sweet_potato", new AliasedBlockItem(ModBlocks.SWEET_POTATOES, (new Item.Settings()).food(ModFoodComponents.SWEET_POTATO)));

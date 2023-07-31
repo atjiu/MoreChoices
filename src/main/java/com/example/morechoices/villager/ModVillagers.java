@@ -53,7 +53,7 @@ public class ModVillagers {
             factories.add((entity, random) -> new TradeOffers.BuyForOneEmeraldFactory(Items.BIRCH_LOG/*白桦木*/, 10, 16, 2).create(entity, random));
             factories.add((entity, random) -> new TradeOffers.BuyForOneEmeraldFactory(Items.JUNGLE_LOG/*丛林木*/, 30, 16, 2).create(entity, random));
             factories.add((entity, random) -> new TradeOffers.BuyForOneEmeraldFactory(Items.ACACIA_LOG/*金合欢木*/, 10, 16, 2).create(entity, random));
-            factories.add((entity, random) -> new TradeOffers.BuyForOneEmeraldFactory(Items.CHERRY_LOG/*樱花木*/, 10, 16, 2).create(entity, random));
+//            factories.add((entity, random) -> new TradeOffers.BuyForOneEmeraldFactory(Items.CHERRY_LOG/*樱花木*/, 10, 16, 2).create(entity, random));
             factories.add((entity, random) -> new TradeOffers.BuyForOneEmeraldFactory(Items.DARK_OAK_LOG/*深色橡木*/, 30, 16, 2).create(entity, random));
         });
         TradeOfferHelper.registerVillagerOffers(CARPENTER, 2, factories -> {
@@ -67,7 +67,7 @@ public class ModVillagers {
         TradeOfferHelper.registerVillagerOffers(CARPENTER, 4, factories -> {
             factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.JUNGLE_SAPLING), 9, 1, 12, 15, 0.2f).create(entity, random));
             factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.DARK_OAK_SAPLING), 11, 1, 12, 15, 0.2f).create(entity, random));
-            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.CHERRY_SAPLING), 13, 1, 12, 15, 0.2f).create(entity, random));
+//            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.CHERRY_SAPLING), 13, 1, 12, 15, 0.2f).create(entity, random));
         });
         TradeOfferHelper.registerVillagerOffers(CARPENTER, 5, factories -> {
             factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.AZALEA), 15, 1, 12, 20, 0.2f).create(entity, random));
@@ -126,7 +126,7 @@ public class ModVillagers {
         });
         TradeOfferHelper.registerVillagerOffers(GARDENER, 5, factories -> {
             factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Blocks.WITHER_ROSE/*凋灵玫瑰*/), 32, 1, 1, 20, 0.2f).create(entity, random));
-            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.TORCHFLOWER/*火把花*/), 32, 1, 1, 20, 0.2f).create(entity, random));
+//            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.TORCHFLOWER/*火把花*/), 32, 1, 1, 20, 0.2f).create(entity, random));
 //            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.PITCHER_PLANT/*瓶子草*/), 32, 1, 1, 20, 0.2f).create(entity, random));
         });
 
