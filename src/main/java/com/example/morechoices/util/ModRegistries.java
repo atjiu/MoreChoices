@@ -70,5 +70,10 @@ public class ModRegistries {
         TradeOfferHelper.registerVillagerOffers(VillagerProfession.CLERIC, 1, factories -> {
             factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.GUNPOWDER), 1, 2, 12, 1, 0.05f).create(entity, random));
         });
+
+        // fisherman villager
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.FISHERMAN, 5, factories -> {
+            factories.add((entity, random) -> new TradeOffers.SellItemFactory(new ItemStack(Items.NAUTILUS_SHELL), 5, 1, 12, 15, 0.05f).create(entity, random));
+        });
     }
 }
