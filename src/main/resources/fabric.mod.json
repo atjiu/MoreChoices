@@ -5,7 +5,7 @@
     "name": "MoreChoices",
     "description": "Enriched the use of copper mines, added prison stone mines in the lower boundary, enriched the professions and transactions of villagers.",
     "authors": [
-        "Tomoya"
+        "朋也"
     ],
     "contact": {
         "homepage": "https://fabricmc.net/",
@@ -30,7 +30,7 @@
     ],
     "depends": {
         "fabricloader": ">=0.14.21",
-        "minecraft": ">=1.19.2",
+        "minecraft": ">=1.20",
         "java": ">=17",
         "fabric-api": "*"
     },
