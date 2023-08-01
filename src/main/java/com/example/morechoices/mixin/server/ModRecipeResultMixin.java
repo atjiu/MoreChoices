@@ -19,7 +19,7 @@ import org.spongepowered.asm.mixin.injection.callback.LocalCapture;
 @Mixin(ShapedRecipe.class)
 public class ModRecipeResultMixin {
 
-    private final static Gson GSON = new Gson().newBuilder().setPrettyPrinting().disableHtmlEscaping().create();
+    private final static Gson GSON = new Gson();
 
     @Inject(method = "outputFromJson", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;<init>(Lnet/minecraft/item/ItemConvertible;I)V"), locals = LocalCapture.CAPTURE_FAILHARD, cancellable = true)
     private static void outputFromJson(JsonObject json, CallbackInfoReturnable<ItemStack> cir, Item item, int count) throws CommandSyntaxException {
