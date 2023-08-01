@@ -17,13 +17,13 @@ public class ModItems {
     public final static Item COPPER_SHOVEL = register("copper_shovel", new ShovelItem(ModToolMaterial.COPPER, 1.5f, -3.0f, new Item.Settings().group(ModItemGroup.MORE_CHOICES)));
     public final static Item COPPER_PICKAXE = register("copper_pickaxe", new PickaxeItem(ModToolMaterial.COPPER, 1, -2.8f, new Item.Settings().group(ModItemGroup.MORE_CHOICES)));
     public final static Item COPPER_AXE = register("copper_axe", new AxeItem(ModToolMaterial.COPPER, 6.0f, -3.1f, new Item.Settings().group(ModItemGroup.MORE_CHOICES)));
-    public final static Item COPPER_HOE = register("copper_hoe", new CopperHoeItem(ModToolMaterial.COPPER, -2, -1.0f, new Item.Settings().group(ModItemGroup.MORE_CHOICES)));
+    public final static Item COPPER_HOE = register("copper_hoe", new ModHoeItem(ModToolMaterial.COPPER, -2, -1.0f, new Item.Settings().group(ModItemGroup.MORE_CHOICES)));
 
     public final static Item HELLSTONE_SWORD = register("hellstone_sword", new SwordItem(ModToolMaterial.HELLSTONE, 3, -2.4f, new Item.Settings().group(ModItemGroup.MORE_CHOICES)));
     public final static Item HELLSTONE_SHOVEL = register("hellstone_shovel", new ShovelItem(ModToolMaterial.HELLSTONE, 1.5f, -3.0f, new Item.Settings().group(ModItemGroup.MORE_CHOICES)));
     public final static Item HELLSTONE_PICKAXE = register("hellstone_pickaxe", new PickaxeItem(ModToolMaterial.HELLSTONE, 1, -2.8f, new Item.Settings().group(ModItemGroup.MORE_CHOICES)));
     public final static Item HELLSTONE_AXE = register("hellstone_axe", new AxeItem(ModToolMaterial.HELLSTONE, 6.0f, -3.1f, new Item.Settings().group(ModItemGroup.MORE_CHOICES)));
-    public final static Item HELLSTONE_HOE = register("hellstone_hoe", new CopperHoeItem(ModToolMaterial.HELLSTONE, -2, -1.0f, new Item.Settings().group(ModItemGroup.MORE_CHOICES)));
+    public final static Item HELLSTONE_HOE = register("hellstone_hoe", new ModHoeItem(ModToolMaterial.HELLSTONE, -2, -1.0f, new Item.Settings().group(ModItemGroup.MORE_CHOICES)));
 
     // ARMOR
     public final static Item COPPER_HELMET = register("copper_helmet", new ArmorItem(ModArmorMaterial.COPPER, EquipmentSlot.HEAD, new Item.Settings().group(ModItemGroup.MORE_CHOICES)));
