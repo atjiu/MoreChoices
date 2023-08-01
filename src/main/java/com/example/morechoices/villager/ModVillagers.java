@@ -5,8 +5,8 @@ import com.example.morechoices.item.ModItems;
 import com.example.morechoices.util.ModTradeOffers;
 import com.google.common.collect.ImmutableSet;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
-import net.fabricmc.fabric.api.object.builder.v1.villager.VillagerProfessionBuilder;
-import net.fabricmc.fabric.api.object.builder.v1.world.poi.PointOfInterestHelper;
+import net.fabricmc.fabric.mixin.object.builder.PointOfInterestTypeAccessor;
+import net.fabricmc.fabric.mixin.object.builder.VillagerProfessionAccessor;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemStack;
@@ -14,7 +14,6 @@ import net.minecraft.item.Items;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.poi.PointOfInterestType;
 
@@ -25,23 +24,21 @@ public class ModVillagers {
     public static final PointOfInterestType GARDENER_POI = registerPOI("gardener_poi", Blocks.FLOWER_POT);
     public static final PointOfInterestType END_ENVOY_POI = registerPOI("end_envoy_poi", Blocks.END_ROD);
 
-    public static final VillagerProfession NETHER_ENVOY = registerProfession("nether_envoy",
-            RegistryKey.of(Registry.POINT_OF_INTEREST_TYPE.getKey(), new Identifier(MoreChoicesMod.MOD_ID, "nether_envoy_poi")));
-    public static final VillagerProfession CARPENTER = registerProfession("carpenter",
-            RegistryKey.of(Registry.POINT_OF_INTEREST_TYPE.getKey(), new Identifier(MoreChoicesMod.MOD_ID, "carpenter_poi")));
-    public static final VillagerProfession GARDENER = registerProfession("gardener",
-            RegistryKey.of(Registry.POINT_OF_INTEREST_TYPE.getKey(), new Identifier(MoreChoicesMod.MOD_ID, "gardener_poi")));
-    public static final VillagerProfession END_ENVOY = registerProfession("end_envoy",
-            RegistryKey.of(Registry.POINT_OF_INTEREST_TYPE.getKey(), new Identifier(MoreChoicesMod.MOD_ID, "end_envoy_poi")));
+    public static final VillagerProfession NETHER_ENVOY = registerProfession("nether_envoy", NETHER_ENVOY_POI);
+    public static final VillagerProfession CARPENTER = registerProfession("carpenter", CARPENTER_POI);
+    public static final VillagerProfession GARDENER = registerProfession("gardener", GARDENER_POI);
+    public static final VillagerProfession END_ENVOY = registerProfession("end_envoy", END_ENVOY_POI);
 
-    public static VillagerProfession registerProfession(String name, RegistryKey<PointOfInterestType> type) {
+    public static VillagerProfession registerProfession(String name, PointOfInterestType type) {
         return Registry.register(Registry.VILLAGER_PROFESSION, new Identifier(MoreChoicesMod.MOD_ID, name),
-                VillagerProfessionBuilder.create().id(new Identifier(MoreChoicesMod.MOD_ID, name)).workstation(type)
-                        .workSound(SoundEvents.ENTITY_VILLAGER_WORK_MASON).build());
+                VillagerProfessionAccessor.create(name, type, ImmutableSet.of(), ImmutableSet.of()
+                        , SoundEvents.ENTITY_VILLAGER_WORK_MASON));
     }
 
     public static PointOfInterestType registerPOI(String name, Block block) {
-        return PointOfInterestHelper.register(new Identifier(MoreChoicesMod.MOD_ID, name), 1, 1, ImmutableSet.copyOf(block.getStateManager().getStates()));
+        return Registry.register(Registry.POINT_OF_INTEREST_TYPE, new Identifier(MoreChoicesMod.MOD_ID, name),
+                PointOfInterestTypeAccessor.callCreate(name,
+                        ImmutableSet.copyOf(block.getStateManager().getStates()), 1, 1));
     }
 
     public static void registerTrades() {
@@ -71,7 +68,7 @@ public class ModVillagers {
         TradeOfferHelper.registerVillagerOffers(CARPENTER, 5, factories -> {
             factories.add((entity, random) -> new ModTradeOffers.SellItemFactory(new ItemStack(Items.AZALEA), 15, 1, 12, 20, 0.2f).create(entity, random));
             factories.add((entity, random) -> new ModTradeOffers.SellItemFactory(new ItemStack(Items.FLOWERING_AZALEA), 19, 1, 12, 20, 0.2f).create(entity, random));
-            factories.add((entity, random) -> new ModTradeOffers.SellItemFactory(new ItemStack(Items.MANGROVE_PROPAGULE), 19, 1, 12, 20, 0.2f).create(entity, random));
+//            factories.add((entity, random) -> new ModTradeOffers.SellItemFactory(new ItemStack(Items.MANGROVE_PROPAGULE), 19, 1, 12, 20, 0.2f).create(entity, random));
             factories.add((entity, random) -> new ModTradeOffers.SellItemFactory(new ItemStack(Items.NAME_TAG), 1, 1, 12, 20, 0.2f).create(entity, random));
         });
 
@@ -152,6 +149,9 @@ public class ModVillagers {
     }
 
     public static void init() {
-
+        PointOfInterestTypeAccessor.callSetup(NETHER_ENVOY_POI);
+        PointOfInterestTypeAccessor.callSetup(CARPENTER_POI);
+        PointOfInterestTypeAccessor.callSetup(GARDENER_POI);
+        PointOfInterestTypeAccessor.callSetup(END_ENVOY_POI);
     }
 }
