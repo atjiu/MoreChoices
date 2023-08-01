@@ -9,6 +9,6 @@ public class ModOreGeneration {
 
     public static void generateOres() {
         BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(),
-                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ORE_HELLSTONE_NETHER_KEY);
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ORE_HELLSTONE_NETHER_KEY.getKey().get());
     }
 }

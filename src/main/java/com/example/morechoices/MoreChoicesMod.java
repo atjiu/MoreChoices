@@ -7,6 +7,7 @@ import com.example.morechoices.item.ModItems;
 import com.example.morechoices.util.ModLootTableModifiers;
 import com.example.morechoices.util.ModRegistries;
 import com.example.morechoices.villager.ModVillagers;
+import com.example.morechoices.world.ModConfiguredFeatures;
 import com.example.morechoices.world.gen.ModOreGeneration;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -21,6 +22,7 @@ public class MoreChoicesMod implements ModInitializer {
     public void onInitialize() {
         LOGGER.info("Hello Fabric world!");
 
+        ModConfiguredFeatures.init();
         ModOreGeneration.generateOres();
 
         ModItems.init();

@@ -33,6 +33,7 @@
     "item.morechoices.fried_dumpling": "Fried Dumpling",
     "item.morechoices.wheat_flour": "Wheat Flour",
     "itemgroup.more_choices": "More Choices",
+    "itemGroup.morechoices.more_choices": "More Choices",
     "entity.minecraft.villager.carpenter": "Carpenter",
     "entity.minecraft.villager.nether_envoy": "Nether Envoy",
     "entity.minecraft.villager.gardener": "Gardener",

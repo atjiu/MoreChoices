@@ -33,6 +33,7 @@
     "item.morechoices.fried_dumpling": "煎饺",
     "item.morechoices.wheat_flour": "面粉",
     "itemgroup.more_choices": "更多选择",
+    "itemGroup.morechoices.more_choices": "更多选择",
     "entity.minecraft.villager.carpenter": "木匠",
     "entity.minecraft.villager.nether_envoy": "阴差",
     "entity.minecraft.villager.gardener": "花匠",
