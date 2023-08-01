@@ -23,8 +23,7 @@ public class ModLootTableModifiers {
                 poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(KilledByPlayerLootCondition.builder())
-//                        .conditionally(RandomChanceLootCondition.builder(0.025f))
-                        .conditionally(RandomChanceLootCondition.builder(0.5f))
+                        .conditionally(RandomChanceLootCondition.builder(0.025f))
                         .with(ItemEntry.builder(ModItems.SWEET_POTATO))
                         .with(ItemEntry.builder(ModItems.PEPPER))
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)));
