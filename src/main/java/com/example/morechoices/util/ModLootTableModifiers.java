@@ -1,7 +1,7 @@
 package com.example.morechoices.util;
 
 import com.example.morechoices.item.ModItems;
-import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
+import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTables;
 import net.minecraft.loot.condition.KilledByPlayerLootCondition;
@@ -17,23 +17,24 @@ public class ModLootTableModifiers {
     public final static Identifier ZOMBIE = new Identifier("minecraft", "entities/zombie");
 
     public static void modifyLootTables() {
-        LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+        LootTableLoadingCallback.EVENT.register((resourceManager, lootManager, id, tableBuilder, source) -> {
             LootPool.Builder poolBuilder = null;
             if (ZOMBIE.equals(id)) {
                 poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(KilledByPlayerLootCondition.builder())
-                        .conditionally(RandomChanceLootCondition.builder(0.025f))
+//                        .conditionally(RandomChanceLootCondition.builder(0.025f))
+                        .conditionally(RandomChanceLootCondition.builder(0.5f))
                         .with(ItemEntry.builder(ModItems.SWEET_POTATO))
                         .with(ItemEntry.builder(ModItems.PEPPER))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)));
             } else if (LootTables.SHIPWRECK_TREASURE_CHEST.equals(id) || LootTables.SHIPWRECK_SUPPLY_CHEST.equals(id) || LootTables.SHIPWRECK_MAP_CHEST.equals(id)) {
                 poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1))
                         .conditionally(RandomChanceLootCondition.builder(0.5f))
                         .with(ItemEntry.builder(ModItems.SWEET_POTATO))
                         .with(ItemEntry.builder(ModItems.PEPPER))
-                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 5.0f)).build());
+                        .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 5.0f)));
             }
             if (poolBuilder != null) tableBuilder.pool(poolBuilder);
         });

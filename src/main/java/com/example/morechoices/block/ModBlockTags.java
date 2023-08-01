@@ -1,15 +1,20 @@
 package com.example.morechoices.block;
 
 import com.example.morechoices.MoreChoicesMod;
+import net.fabricmc.fabric.api.tag.TagFactory;
 import net.minecraft.item.Item;
-import net.minecraft.tag.TagKey;
+import net.minecraft.tag.Tag;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 
 public class ModBlockTags {
 
-    public static final TagKey<Item> RAW_MEAT = TagKey.of(Registry.ITEM_KEY, new Identifier(MoreChoicesMod.MOD_ID, "raw_meat"));
+    public static final Tag.Identified<Item> RAW_MEAT = createTag("raw_meat");
+
+    private static Tag.Identified<Item> createTag(String name) {
+        return TagFactory.ITEM.create(new Identifier(MoreChoicesMod.MOD_ID, name));
+    }
 
     public static void init() {
     }
+
 }
